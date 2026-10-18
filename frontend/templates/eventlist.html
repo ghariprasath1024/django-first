@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+{% block content %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    a {
+        margin: 10px;
+        text-decoration: none;
+        color: #007BFF;
+    }
+
+    td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 200px;
+    }
+
+    table {
+        margin: 20px auto;
+    }
+</style>
+<form>
+    <table border="1" align="center">
+        <tr>
+            <td>test1</td>
+            <td><a href="/backend/test1/">Apply</a></td>
+        </tr>
+        <tr>
+            <td>test2</td>
+            <td><a href="/backend/test2/">Apply</a></td>
+        </tr>
+        <tr>
+            <td>test3</td>
+            <td><a href="/backend/test3/">Apply</a></td>
+        </tr>
+        <tr>
+            <td>test4</td>
+            <td><a href="/backend/test4/">Apply</a></td>
+        </tr>
+        <tr>
+            <td>test5</td>
+            <td><a href="/backend/test5/">Apply</a></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

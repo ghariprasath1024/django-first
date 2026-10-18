@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form div{
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        td{
+            text-align: left;
+        }
+        table{
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    {% extends "index.html" %}
+    {% block content %}
+    <h1>test4</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+         <table align="center">
+            <tr>
+                <td>{{ form.name.label }}</td>
+                <td>: {{ form.name }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.department.label }}</td>
+                <td>: {{ form.department }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.register_no.label }}</td>
+                <td>: {{ form.register_no }}</td>
+            </tr>
+             <tr>
+                <td>{{ form.email.label }}</td>
+                <td>: {{ form.email }}</td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

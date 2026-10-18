@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% extends "index.html" %}
+    {% block content %}
+    <h1>Apply List</h1>
+    <p>This is the apply list page.</p>
+    <h1>Test 1</h1>
+
+    <p>Number of registered : {{ test1|length }}</p>
+    <table align="center" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Register No</th>
+            <th>Department</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {% for i in test1 %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.register_no }}</td>
+            <td>{{ i.department }}</td>
+            <td><a href="{% url  "update1" id=i.id %}"><button>Update</button></a></td>
+            <td><a href="{% url  "test1" id=i.id %}"><button>Delete</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Test 2</h1>
+    <p>Number of registered: {{ test2|length }}</p>
+    <table align="center" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Register No</th>
+            <th>Mobile</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {% for i in test2 %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.register_no }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.mobile }}</td>
+            <td><a href="{% url "update2" id=i.id %}"><button>Update</button></a></td>
+            <td><a href="{% url "test2" id=i.id %}"><button>delete</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Test 3</h1>
+    <p>Number of registered : {{ test3|length }}</p>
+    <table align="center" border="1" cellpadding="10" cellspacing="0">
+        <th>Name</th>
+        <th>Department</th>
+        <th>Register No</th>
+        <th>Email</th>
+        <th>Language</th>
+        <th>Update</th>
+        <th>Delete</th>
+        </tr>
+        {% for i in test3 %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.register_no }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.language }}</td>
+            <td><a href="{% url "update3" id=i.id %}"><button>Update</button></a></td>
+            <th><a href="{% url "test3" id=i.id %}"><button>Delete</button></a></th>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Test 4</h1>
+    <p>Number of registered : {{ test4|length }}</p>
+    <table align="center" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Register No</th>
+            <th>Email</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {% for i in test4 %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.register_no }}</td>
+            <td>{{ i.department }}</td>
+            <td><button>Update</button></td>
+            <td><a href="{% url "test4" id=i.id %}"><button>Delete</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Test 5</h1>
+    <p>Number of registered : {{ test5|length }}</p>
+    <table align="center" border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Register No</th>
+            <th>Department</th>
+            <th>Language</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        {% for i in test5 %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.register_no }}</td>
+            <td>{{ i.department }}</td>
+            <td>{{ i.language }}</td>
+            <td><button>Update</button></td>
+            <td><a href="{% url "test5" id=i.id %}"><button>Delete</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
+</body>
+
+</html>
